@@ -11,10 +11,10 @@
 #define MATH_TWO_THIRD   0.6666666
 #define MATH_ONE_SIXTH   0.1666666
 
-float3x3 RotationMatrixAxis(float radians, float3 axis)
+float3x3 RotationMatrixAxis(float radian, float3 axis)
 {
     float _sin, _cos;
-    sincos(radians, _sin, _cos);
+    sincos(radian, _sin, _cos);
 
     float t = 1 - _cos;
     float x = axis.x;
@@ -26,30 +26,30 @@ float3x3 RotationMatrixAxis(float radians, float3 axis)
                     t * x * z - _sin * y,  t * y * z + _sin * x,  t * z * z + _cos);
 }
 
-float3x3 RotationMatrixX(float radians)
+float3x3 RotationMatrixX(float radian)
 {
     float _sin, _cos;
-    sincos(radians, _sin, _cos);
+    sincos(radian, _sin, _cos);
 
     return float3x3(1,    0,     0,
                     0, _cos, -_sin,
                     0, _sin,  _cos);
 }
 
-float3x3 RotationMatrixY(float radians)
+float3x3 RotationMatrixY(float radian)
 {
     float _sin, _cos;
-    sincos(radians, _sin, _cos);
+    sincos(radian, _sin, _cos);
 
     return float3x3(_cos, 0, -_sin,
                        0, 1,     0,
                     _sin, 0,  _cos);
 }
 
-float3x3 RotationMatrixZ(float radians)
+float3x3 RotationMatrixZ(float radian)
 {
     float _sin, _cos;
-    sincos(radians, _sin, _cos);
+    sincos(radian, _sin, _cos);
 
     return float3x3(_cos, -_sin,  0,
                     _sin,  _cos,  0,

@@ -14,8 +14,19 @@ You can import this asset from UnityPackage.
 
 ```hlsl
 #define MATH_PI          3.1415926
+#define MATH_2PI         6.2831852
+
 #define MATH_DEG_TO_RAD  0.0174533
 #define MATH_RAD_TO_DEG 57.2957795
+
+#define MATH_RAD_15      0.2617993
+#define MATH_RAD_30      0.5235987
+#define MATH_RAD_45      0.7853981
+#define MATH_RAD_60      1.0471975
+#define MATH_RAD_90      1.5707963
+#define MATH_RAD_120     2.0943951
+#define MATH_RAD_135     2.3561944
+#define MATH_RAD_150     2.6179938
 
 #define MATH_HALF        0.5
 #define MATH_QUATER      0.25
@@ -29,5 +40,6 @@ float3x3 RotationMatrixY(float radian)
 float3x3 RotationMatrixZ(float radian)
 float DegreeToRadian(float degree)
 float RadianToDegree(float radian)
-float Random(float2 coordinate, int seed)
+float Random(float2 uv)
+float Random(float2 uv, int seed)
 ```
